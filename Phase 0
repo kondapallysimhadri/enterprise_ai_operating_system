@@ -1,1 +1,1804 @@
 
+Enterprise Knowledge Governance Platform (EKGP)
+
+Complete Phase 0 Documentation
+
+01_problem_discovery.md
+Problem Statement
+Organizations lose millions of dollars annually because knowledge decays, employees leave, and AI systems provide answers without proof.
+
+Core Problems
+1. Knowledge Decay
+Enterprise documentation becomes outdated rapidly. When documentation is stale, AI agents confidently propagate incorrect information at scale.
+
+49% of information employees find is already obsolete
+
+62% of customer service agents report their reference materials are out‑of‑date
+
+Documentation "starts drifting from reality" as soon as processes change
+
+Traditional wikis become "graveyards of half‑true pages nobody reads"
+
+2. Organizational Memory Loss
+When employees leave, vital expertise walks out the door.
+
+42% of the skills needed for a role disappear when someone departs
+
+Organizations lose a generation's worth of corporate memory every ~20 years due to turnover
+
+Without systematic transfer, new hires must "figure it out" on their own for months
+
+Undocumented process details are forgotten permanently
+
+3. AI Trust Gap
+Generative AI often hallucinates, and teams can't verify answers.
+
+Only 46% of users trust AI outputs despite 66% using AI tools
+
+95% of corporate generative AI pilots are failing to produce productivity uplifts
+
+62% of companies cite knowledge governance as their top AI deployment challenge
+
+AI tools trained on stale corporate data "become a liability at scale"
+
+Hidden Costs
+Cost Category	Annual Impact
+Poor data quality	$12.9 million per company (Gartner)
+Lost organizational knowledge	$31.5 billion for Fortune 500 (IDC)
+1,000-employee company	~$2.4 million annual loss
+Employees repeating work	6+ hours per week per employee
+Customers abandoning brand	32% after one bad experience
+Goal
+Build a platform that:
+
+Preserves organizational memory
+
+Detects stale information automatically
+
+Provides trusted, verifiable AI answers
+
+Grounds every output in source evidence
+
+02_market_research.md
+Market Problems
+The AI Failure Rate
+95% of enterprise generative AI pilots fail to produce meaningful productivity uplift
+
+Many organizations seeing zero return on AI investments
+
+Fragmented data is the primary roadblock
+
+Cultural resistance and weak governance compound the issue
+
+Documentation Problems
+Knowledge exists in disconnected silos:
+
+Source	Format	Challenge
+Google Drive	Documents, Spreadsheets, Slides	No freshness tracking
+Confluence	Wikis, SOPs, Technical Docs	Becomes stale quickly
+Notion	Knowledge Bases, Projects	No decay detection
+Slack	Conversations, Decisions	Not searchable or governed
+GitHub	Code, Issues, PRs	Technical knowledge isolated
+Jira	Tickets, Tasks, History	Project context lost
+Email	Communications, Attachments	Impossible to index at scale
+The Gap
+Most solutions focus on:
+
+Search
+
+Chat
+
+RAG
+
+Few focus on:
+
+Trust
+
+Freshness
+
+Knowledge Governance
+
+Decay Detection
+
+Organizational Memory Preservation
+
+Market Opportunity
+Metric	Value
+Enterprise AI market	~$200B by 2025
+Knowledge management market	~$25B
+AI governance market	~$5B and growing
+Organizations with AI governance	Only 36% have connected AI to trusted content
+Market Trends
+Regulatory Pressure
+
+EU AI Act (2025)
+
+GDPR, CCPA enforcement increasing
+
+Need for auditable AI
+
+Knowledge is the Moat
+
+Enterprises realize proprietary data is their advantage
+
+AI without trusted knowledge is useless
+
+AI Agents Need Context
+
+Agentic AI needs continuous context
+
+Static documentation fails in agentic workflows
+
+03_product_vision.md
+Product Name
+Enterprise Knowledge Governance Platform (EKGP)
+
+Mission
+Preserve organizational memory and maintain trusted enterprise knowledge.
+
+Vision
+Enable every enterprise decision to be based on verified, current knowledge.
+
+Core Value Proposition
+We don't just store knowledge. We govern it.
+
+Memory: Preserve institutional knowledge
+
+Trust: Every answer is verifiable
+
+Freshness: Detect and resolve decay automatically
+
+User Experience
+For Data Scientists
+Search for trusted knowledge
+
+See trust scores and freshness
+
+Build agents that never hallucinate
+
+For Engineers
+Connect data sources easily
+
+Build RAG with confidence
+
+Debug AI failures with audit trails
+
+For Business Users
+Find what they need instantly
+
+Trust the answers they receive
+
+Understand why knowledge is trustworthy
+
+Guiding Principles
+Trust by Design — Every answer has a source
+
+Governance First — Compliance is built in, not added later
+
+Open Architecture — No vendor lock-in
+
+Continuous Freshness — Stale knowledge is detected and flagged
+
+Preserve Memory — Knowledge persists beyond employee turnover
+
+04_customer_definition.md
+Primary Customer
+Enterprise Organizations (500+ employees)
+
+Secondary Customer
+Mid-sized Organizations (50-500 employees)
+
+Target Industries
+Industry	Use Case
+Financial Services	Compliance, reporting, decision audits
+Healthcare	Regulatory compliance, clinical knowledge
+Technology	Engineering docs, onboarding, decisions
+Government	Policy management, FOIA, transparency
+Manufacturing	SOPs, quality, safety docs
+Retail	Operations, training, vendor docs
+Target Users
+Persona	Role	Pain Point
+CTO/CIO	Technology leadership	AI failure risk, data governance
+Engineering Manager	Team leadership	Knowledge loss, onboarding friction
+Head of Data	Data strategy	Data governance, compliance
+Product Manager	Product leadership	Decision context, product docs
+HR Director	People operations	Onboarding, training, turnover
+Compliance Officer	Regulatory	Auditable AI, policy enforcement
+Chief AI Officer	AI strategy	AI trust, governance, success
+Buyer Persona Profile
+Attribute	Description
+Title	CTO, Head of Data, Head of AI
+Budget	$100K - $1M+ annually
+Pain	AI project failure, knowledge loss, governance gaps
+Decision Criteria	ROI, ease of use, integration, compliance
+Timeline	3-6 months evaluation, 6-12 months rollout
+05_competitor_analysis.md
+Direct Competitors
+Competitor	Category	Strength	Weakness
+Glean	Enterprise Search	Unified search across tools	No trust/freshness
+Notion AI	Knowledge + AI	Integrated workspace	Limited to Notion data
+Microsoft Copilot	Office + AI	Deep Microsoft integration	Cost, limited customization
+Guru	Knowledge Management	Verification workflows	Labor‑intensive to maintain
+Confluence AI	Wiki + AI	Deep Atlassian integration	Relies on Confluence data
+Slab	Company Wiki	Clean, simple	No AI trust features
+DataRobot	AI Platform	End-to-end ML	No knowledge governance
+Palantir	Data Platform	Data integration	Cost, complexity
+Indirect Competitors
+Competitor	Category	Why They Compete
+AWS SageMaker	Cloud AI	Has some governance
+Google Vertex AI	Cloud AI	Agents + governance
+Databricks	Data + AI	Lakehouse + MLflow
+IBM Watsonx	Enterprise AI	Governance focus
+Gap Analysis
+Feature	Glean	Notion AI	Copilot	Guru	EKGP
+Cross-source search	✅	❌	✅	❌	✅
+Trust scoring	❌	❌	❌	⚠️	✅
+Decay detection	❌	❌	❌	❌	✅
+Source grounding	⚠️	❌	⚠️	✅	✅
+Organizational memory	❌	❌	❌	❌	✅
+Compliance auditing	❌	❌	❌	❌	✅
+Agent orchestration	⚠️	❌	⚠️	❌	✅
+Graph knowledge	❌	❌	❌	❌	✅
+Competitive Differentiators
+EKGP is different because:
+
+Trust is our product — Not an afterthought
+
+Freshness is tracked — Stale knowledge is detected
+
+Memory is preserved — Knowledge persists beyond turnover
+
+Answers are verified — Citations for every claim
+
+Governance is built-in — Compliance from day one
+
+06_product_requirements.md
+Core Features
+1. Connector Layer
+Ingest knowledge from enterprise sources:
+
+Connector	Priority	Status
+Google Drive	P0	MVP
+Confluence	P1	Post-MVP
+Slack	P1	Post-MVP
+GitHub	P1	Post-MVP
+Notion	P2	Post-MVP
+Jira	P2	Post-MVP
+SharePoint	P2	Post-MVP
+2. Knowledge Layer
+Store and organize knowledge:
+
+Feature	Description
+Knowledge Assets	Unified representation of all content
+Versioning	Track changes over time
+Chunking	Break content into retrievable pieces
+Embeddings	Semantic understanding
+Relationships	Connect related knowledge
+Search	Vector + keyword + graph hybrid
+3. Intelligence Layer
+Govern and trust knowledge:
+
+Feature	Description
+Trust Engine	Score knowledge credibility
+Decay Engine	Detect stale content
+Freshness Tracking	Monitor update timeliness
+Authority Scoring	Evaluate source credibility
+4. Governance Layer
+Enforce policies and compliance:
+
+Feature	Description
+RBAC	Role-based access control
+Policy Engine	Enforce governance rules
+Audit Logs	Track all access and changes
+Compliance Reports	GDPR, SOC2, etc.
+Data Lineage	Trace data origins
+5. Agent Layer (Future)
+Enable AI agents with trusted context:
+
+Feature	Description
+Trusted RAG	Ground agents in verified knowledge
+Knowledge APIs	Expose governed knowledge
+Agent Memory	Long-term agent context
+Functional Requirements
+Authentication & Authorization
+JWT-based authentication
+
+Role-based access control
+
+Team and department management
+
+SSO integration (future)
+
+Knowledge Collection
+Connector framework
+
+Google Drive integration
+
+Scheduled sync
+
+Incremental updates
+
+Knowledge Processing
+Document chunking
+
+Embedding generation
+
+Metadata extraction
+
+Content normalization
+
+Knowledge Storage
+PostgreSQL for metadata
+
+Qdrant for vectors
+
+S3 for raw files
+
+Neo4j for relationships (future)
+
+Knowledge Search
+Hybrid search (vector + keyword)
+
+Filters (content type, date, source)
+
+Relevance ranking
+
+Search suggestions
+
+Trust
+Trust score calculation
+
+Freshness scoring
+
+Authority scoring
+
+Verification tracking
+
+Score history
+
+Decay
+Age-based decay detection
+
+Author departure detection
+
+Decay alerts
+
+Resolution tracking
+
+UI
+Search interface
+
+Trust score visualization
+
+Decay alerts dashboard
+
+Knowledge asset view
+
+Admin interface (future)
+
+Non-Functional Requirements
+Requirement	Specification
+Performance	Search < 200ms latency
+Scalability	Support 1M+ documents
+Availability	99.9% uptime
+Security	SOC2, GDPR compliant
+Extensibility	Plugin architecture
+Maintainability	Microservices
+Portability	Cloud-agnostic
+07_system_architecture.md
+High-Level Architecture
+
+
+
+
+
+
+
+
+
+Layer Breakdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Architecture Principles
+Event-Driven — Services communicate via events
+
+Domain-Driven — Each service owns its domain
+
+Loose Coupling — Services can evolve independently
+
+Observability — All services emit metrics
+
+Security First — Authentication everywhere
+
+08_domain_model.md
+Core Entities
+KnowledgeAsset (Base)
+text
+Attributes:
+- id: UUID
+- source_id: string
+- connector_id: UUID
+- title: string
+- content: text
+- content_type: enum
+- checksum: string
+- created_at: timestamp
+- created_by_id: UUID
+- updated_at: timestamp
+- updated_by_id: UUID
+- source_url: string
+- access_level: enum
+- owner_id: UUID
+- owner_type: enum
+- status: enum
+- current_version_id: UUID
+- metadata: JSON
+Document (extends KnowledgeAsset)
+text
+Attributes:
+- file_name: string
+- file_size: int
+- page_count: int
+- mime_type: string
+- author: string
+Meeting (extends KnowledgeAsset)
+text
+Attributes:
+- meeting_date: timestamp
+- duration_minutes: int
+- organizer_id: UUID
+- attendees: UUID[]
+- location: string
+Decision (extends KnowledgeAsset)
+text
+Attributes:
+- decision_date: timestamp
+- made_by_id: UUID
+- approved_by_id: UUID
+- status: enum
+- rationale: text
+- impact_assessment: text
+Conversation (extends KnowledgeAsset)
+text
+Attributes:
+- participants: UUID[]
+- message_count: int
+- channel_type: enum
+- channel_name: string
+- summary: string
+Policy (extends KnowledgeAsset)
+text
+Attributes:
+- policy_type: enum
+- policy_version: string
+- effective_date: date
+- expiry_date: date
+- applies_to_roles: UUID[]
+- applies_to_teams: UUID[]
+- applies_to_content_types: enum[]
+- rules: JSON
+- enforcement_mode: enum
+- regulatory_framework: string[]
+Version
+text
+Attributes:
+- id: UUID
+- asset_id: UUID
+- version_number: int
+- content: text
+- content_hash: string
+- change_type: enum
+- change_summary: text
+- created_at: timestamp
+- created_by_id: UUID
+- previous_version_id: UUID
+Chunk
+text
+Attributes:
+- id: UUID
+- asset_id: UUID
+- version_id: UUID
+- content: text
+- token_count: int
+- embedding: vector
+- embedding_model: string
+- start_offset: int
+- end_offset: int
+- chunk_index: int
+- heading_path: string
+- parent_chunk_id: UUID
+Employee
+text
+Attributes:
+- id: UUID
+- email: string
+- name: string
+- title: string
+- department_id: UUID
+- manager_id: UUID
+- start_date: date
+- end_date: date
+- is_active: boolean
+- expertise_areas: string[]
+- trust_score: float
+Team
+text
+Attributes:
+- id: UUID
+- name: string
+- department_id: UUID
+- lead_id: UUID
+- created_at: timestamp
+- updated_at: timestamp
+- is_active: boolean
+- purpose: string
+Department
+text
+Attributes:
+- id: UUID
+- name: string
+- parent_department_id: UUID
+- head_id: UUID
+- default_access_level: enum
+TrustRecord
+text
+Attributes:
+- id: UUID
+- asset_id: UUID
+- chunk_id: UUID
+- version_id: UUID
+- trust_score: float
+- freshness_score: float
+- authority_score: float
+- verification_score: float
+- evaluation_method: enum
+- evaluated_at: timestamp
+- evaluated_by_id: UUID
+- reasoning: text
+- sources_verified: string[]
+- next_evaluation_due: timestamp
+DecayEvent
+text
+Attributes:
+- id: UUID
+- asset_id: UUID
+- version_id: UUID
+- decay_type: enum
+- decay_rate: float
+- decay_score: float
+- detected_at: timestamp
+- detected_by: enum
+- trigger_event: string
+- is_resolved: boolean
+- resolved_at: timestamp
+- resolution_action: enum
+- resolved_by_id: UUID
+Citation
+text
+Attributes:
+- id: UUID
+- source_chunk_id: UUID
+- target_answer_id: UUID
+- target_knowledge_id: UUID
+- confidence: float
+- created_at: timestamp
+- excerpt: string
+- relevance_score: float
+AIAnswer
+text
+Attributes:
+- id: UUID
+- query: text
+- response: text
+- trust_score: float
+- generated_at: timestamp
+- user_id: UUID
+- model: string
+- model_version: string
+- latency_ms: int
+- sources_used: UUID[]
+- citations: UUID[]
+- is_verified: boolean
+- verified_by_id: UUID
+- verified_at: timestamp
+- feedback_score: float
+- feedback_comment: string
+SourceConnector
+text
+Attributes:
+- id: UUID
+- name: string
+- connector_type: enum
+- config: JSON
+- sync_frequency: enum
+- last_sync: timestamp
+- sync_status: enum
+- auth_method: enum
+- auth_metadata: JSON
+- error_count: int
+- success_rate: float
+Relationships
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+09_database_architecture.md
+Storage Technologies
+Component	Purpose	Technology
+Metadata	Assets, versions, users, trust records	PostgreSQL
+Vectors	Embeddings, semantic search	Qdrant
+Graph	Relationships, knowledge graph	Neo4j
+Raw Files	Original documents, attachments	S3 / Object Storage
+PostgreSQL Schema
+Users Table
+sql
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255),
+    name VARCHAR(255) NOT NULL,
+    title VARCHAR(255),
+    department_id UUID,
+    manager_id UUID,
+    start_date DATE,
+    end_date DATE,
+    is_active BOOLEAN DEFAULT TRUE,
+    expertise_areas JSONB DEFAULT '[]',
+    trust_score FLOAT DEFAULT 0.5,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP
+);
+Teams Table
+sql
+CREATE TABLE teams (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    department_id UUID,
+    lead_id UUID,
+    is_active BOOLEAN DEFAULT TRUE,
+    purpose TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP
+);
+Departments Table
+sql
+CREATE TABLE departments (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    parent_department_id UUID,
+    head_id UUID,
+    default_access_level VARCHAR(50) DEFAULT 'INTERNAL',
+    created_at TIMESTAMP DEFAULT NOW()
+);
+Assets Table
+sql
+CREATE TABLE assets (
+    id UUID PRIMARY KEY,
+    source_id VARCHAR(255),
+    connector_id UUID,
+    title VARCHAR(500) NOT NULL,
+    content TEXT NOT NULL,
+    content_type VARCHAR(50) NOT NULL,
+    checksum VARCHAR(64),
+    created_at TIMESTAMP DEFAULT NOW(),
+    created_by_id UUID,
+    updated_at TIMESTAMP,
+    updated_by_id UUID,
+    source_url VARCHAR(500),
+    access_level VARCHAR(50) DEFAULT 'INTERNAL',
+    owner_id UUID,
+    owner_type VARCHAR(50),
+    status VARCHAR(50) DEFAULT 'ACTIVE',
+    current_version_id UUID,
+    metadata JSONB DEFAULT '{}'
+);
+Versions Table
+sql
+CREATE TABLE versions (
+    id UUID PRIMARY KEY,
+    asset_id UUID REFERENCES assets(id),
+    version_number INTEGER NOT NULL,
+    content TEXT NOT NULL,
+    content_hash VARCHAR(64) NOT NULL,
+    change_type VARCHAR(50),
+    change_summary TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    created_by_id UUID,
+    previous_version_id UUID
+);
+Chunks Table
+sql
+CREATE TABLE chunks (
+    id UUID PRIMARY KEY,
+    asset_id UUID REFERENCES assets(id),
+    version_id UUID REFERENCES versions(id),
+    content TEXT NOT NULL,
+    token_count INTEGER NOT NULL,
+    chunk_index INTEGER NOT NULL,
+    heading_path VARCHAR(500),
+    embedding_id VARCHAR(100),
+    start_offset INTEGER,
+    end_offset INTEGER,
+    parent_chunk_id UUID
+);
+Trust Records Table
+sql
+CREATE TABLE trust_records (
+    id UUID PRIMARY KEY,
+    asset_id UUID REFERENCES assets(id),
+    chunk_id UUID REFERENCES chunks(id),
+    version_id UUID REFERENCES versions(id),
+    trust_score FLOAT NOT NULL,
+    freshness_score FLOAT NOT NULL,
+    authority_score FLOAT NOT NULL,
+    verification_score FLOAT NOT NULL,
+    evaluation_method VARCHAR(50) NOT NULL,
+    evaluated_at TIMESTAMP DEFAULT NOW(),
+    evaluated_by_id UUID,
+    reasoning TEXT,
+    sources_verified TEXT,
+    next_evaluation_due TIMESTAMP
+);
+Decay Events Table
+sql
+CREATE TABLE decay_events (
+    id UUID PRIMARY KEY,
+    asset_id UUID REFERENCES assets(id),
+    version_id UUID REFERENCES versions(id),
+    decay_type VARCHAR(50) NOT NULL,
+    decay_rate FLOAT NOT NULL,
+    decay_score FLOAT NOT NULL,
+    detected_at TIMESTAMP DEFAULT NOW(),
+    detected_by VARCHAR(50) NOT NULL,
+    trigger_event VARCHAR(255),
+    is_resolved BOOLEAN DEFAULT FALSE,
+    resolved_at TIMESTAMP,
+    resolution_action VARCHAR(50),
+    resolved_by_id UUID
+);
+Source Connectors Table
+sql
+CREATE TABLE connectors (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    connector_type VARCHAR(50) NOT NULL,
+    config JSONB,
+    sync_frequency VARCHAR(50),
+    last_sync TIMESTAMP,
+    sync_status VARCHAR(50),
+    auth_method VARCHAR(50),
+    auth_metadata JSONB,
+    error_count INTEGER DEFAULT 0,
+    success_rate FLOAT DEFAULT 1.0,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP
+);
+Qdrant Collection Schema
+text
+Collection: knowledge_chunks
+- Vectors: 384-dim (MiniLM)
+- Payload:
+  - asset_id (UUID)
+  - chunk_id (UUID)
+  - content_type (string)
+  - title (string)
+  - source (string)
+  - created_at (timestamp)
+  - access_level (string)
+Index Strategy
+Table	Index	Type
+users	email	UNIQUE B-Tree
+users	department_id	B-Tree
+assets	source_id	B-Tree
+assets	content_type	B-Tree
+assets	created_at	B-Tree
+assets	status	B-Tree
+chunks	asset_id	B-Tree
+chunks	version_id	B-Tree
+trust_records	asset_id	B-Tree
+decay_events	asset_id	B-Tree
+decay_events	is_resolved	B-Tree
+10_connector_architecture.md
+Connector Framework
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Connector Types
+Type	Description	Examples
+Document Repositories	Files, wikis, structured docs	Google Drive, Confluence, Notion, SharePoint
+Communication	Conversations, decisions	Slack, Teams, Email
+Development	Code, issues, docs	GitHub, GitLab, Jira
+Web	Public knowledge, docs	Websites, documentation
+Connector Pipeline
+
+
+
+
+
+
+
+
+Google Drive Connector (MVP)
+yaml
+Connector: Google Drive
+API: Google Drive API v3
+Authentication: OAuth 2.0
+Data Types:
+  - Google Docs → text/plain
+  - Google Sheets → CSV/JSON
+  - Google Slides → text
+  - PDF → extract text
+  - DOCX → extract text
+  - TXT → direct read
+Features:
+  - Folder traversal
+  - File discovery
+  - Incremental sync
+  - Rate limiting
+  - Error retry
+Connector API
+yaml
+POST /connectors
+  - Create connector configuration
+
+POST /connectors/{id}/sync
+  - Trigger sync job
+
+GET /connectors/{id}/status
+  - Get sync status
+
+GET /connectors/{id}/files
+  - List synced files
+
+POST /connectors/{id}/discover
+  - Discover new content
+Sync Strategy
+Mode	Description	Use Case
+Full Sync	All content	Initial setup
+Incremental Sync	Changed content	Regular updates
+Webhook Sync	Real-time changes	Critical sources
+11_api_contracts.md
+API Design Principles
+Principle	Implementation
+Resource-Oriented	RESTful endpoints
+Versioned	/api/v1/ prefix
+Pagination	limit and offset
+Filtering	filter parameter
+Sorting	sort parameter
+Idempotency	Idempotency-Key header
+Rate Limiting	X-RateLimit-* headers
+Correlation	X-Correlation-ID header
+Common Response Formats
+Success Response
+json
+{
+    "status": "success",
+    "data": { ... },
+    "meta": {
+        "timestamp": "2024-01-01T00:00:00Z",
+        "request_id": "uuid",
+        "version": "v1"
+    }
+}
+Error Response
+json
+{
+    "status": "error",
+    "error": {
+        "code": "RESOURCE_NOT_FOUND",
+        "message": "Asset with id 123 not found",
+        "details": { ... },
+        "request_id": "uuid"
+    }
+}
+Paginated Response
+json
+{
+    "status": "success",
+    "data": {
+        "items": [ ... ],
+        "pagination": {
+            "limit": 20,
+            "offset": 0,
+            "total": 100,
+            "next": "/api/v1/...?limit=20&offset=20"
+        }
+    }
+}
+API Endpoints
+Authentication
+text
+POST /auth/login
+  - Login with email/password
+  - Returns JWT token
+
+POST /auth/refresh
+  - Refresh JWT token
+
+POST /auth/logout
+  - Invalidate token
+
+GET /auth/me
+  - Get current user info
+Users
+text
+GET /users
+  - List users
+
+POST /users
+  - Create user
+
+GET /users/{id}
+  - Get user
+
+PUT /users/{id}
+  - Update user
+
+PUT /users/{id}/roles
+  - Update roles
+Teams
+text
+GET /teams
+  - List teams
+
+POST /teams
+  - Create team
+
+GET /teams/{id}
+  - Get team
+
+PUT /teams/{id}
+  - Update team
+
+POST /teams/{id}/members
+  - Add member
+
+DELETE /teams/{id}/members/{user_id}
+  - Remove member
+Connectors
+text
+GET /connectors
+  - List connectors
+
+POST /connectors
+  - Create connector
+
+GET /connectors/{id}
+  - Get connector
+
+PUT /connectors/{id}
+  - Update connector
+
+DELETE /connectors/{id}
+  - Delete connector
+
+POST /connectors/{id}/sync
+  - Trigger sync
+
+GET /connectors/{id}/sync/status
+  - Get sync status
+
+GET /connectors/{id}/sync/history
+  - Sync history
+Assets
+text
+GET /assets
+  - List assets
+
+POST /assets
+  - Create asset
+
+GET /assets/{id}
+  - Get asset
+
+PUT /assets/{id}
+  - Update asset
+
+DELETE /assets/{id}
+  - Delete asset
+
+GET /assets/{id}/versions
+  - List versions
+
+GET /assets/{id}/chunks
+  - List chunks
+
+GET /assets/{id}/relationships
+  - Get relationships
+Search
+text
+POST /search
+  - Hybrid search
+
+POST /search/vector
+  - Vector search
+
+POST /search/keyword
+  - Keyword search
+
+POST /search/graph
+  - Graph search
+Trust
+text
+POST /trust/evaluate/{asset_id}
+  - Evaluate trust
+
+GET /trust/score/{asset_id}
+  - Get trust score
+
+GET /trust/score/{asset_id}/history
+  - Trust history
+
+POST /trust/verify/{asset_id}
+  - Manual verification
+
+GET /trust/citations/{answer_id}
+  - Get citations
+Decay
+text
+POST /decay/detect/{asset_id}
+  - Detect decay
+
+GET /decay/status/{asset_id}
+  - Get decay status
+
+GET /decay/events/{asset_id}
+  - List decay events
+
+POST /decay/resolve/{id}
+  - Resolve decay
+HTTP Status Codes
+Code	Usage
+200	Success
+201	Created
+202	Accepted (async)
+204	No Content
+400	Bad Request
+401	Unauthorized
+403	Forbidden
+404	Not Found
+409	Conflict
+422	Unprocessable Entity
+429	Too Many Requests
+500	Internal Server Error
+12_service_architecture.md
+Service Overview
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Service Definitions
+1. Identity Service
+text
+Responsibility: Authentication, authorization, user/team management
+APIs: /auth/*, /users/*, /teams/*, /departments/*
+Events Published: EmployeeHired, EmployeeDeparting, EmployeeRoleChanged
+Database: Users, Roles, Teams, Departments
+2. Connector Service
+text
+Responsibility: Source integration, sync scheduling, change detection
+APIs: /connectors/*, /connectors/{id}/sync/*
+Events Published: SourceConnectorFailed, SourceConnectorRecovered
+Database: SourceConnector, SyncHistory
+3. Ingestion Service
+text
+Responsibility: Content processing, chunking, embedding, versioning
+APIs: /ingest, /ingest/status
+Events Published: KnowledgeItemCreated, KnowledgeItemUpdated
+Database: KnowledgeAsset, Version, Chunk
+4. Memory Service
+text
+Responsibility: Knowledge storage, retrieval, relationship management
+APIs: /assets/*, /relationships/*
+Events Published: RelationshipDiscovered
+Database: KnowledgeGraph, Relationships
+5. Trust Service
+text
+Responsibility: Trust evaluation, confidence scoring, verification
+APIs: /trust/*
+Events Published: TrustScoreChanged, TrustScoreThresholdBreached
+Database: TrustRecord, Citation
+6. Decay Service
+text
+Responsibility: Staleness detection, decay tracking, resolution
+APIs: /decay/*
+Events Published: DecayDetected, DecayResolved
+Database: DecayEvent
+7. Search Service
+text
+Responsibility: Hybrid search, relevance ranking
+APIs: /search/*
+Events Published: None
+Database: SearchIndex, EmbeddingIndex
+8. Agent Service
+text
+Responsibility: AI agent orchestration, answer generation
+APIs: /agent/*
+Events Published: AnswerGenerated, AnswerVerified
+Database: AIAnswer
+9. Analytics Service
+text
+Responsibility: Metrics collection, dashboards, reporting
+APIs: /analytics/*
+Events Published: None
+Database: Metrics, Reports
+Service Communication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13_trust_engine.md
+Trust Score Formula
+text
+Trust Score = (Freshness × w1) + (Authority × w2) + (Verification × w3)
+
+Where: w1 + w2 + w3 = 1.0 (configurable)
+Components
+Freshness
+Based on last update date:
+
+Days Since Update	Score
+≤ 30 days	1.0
+≤ 90 days	0.8
+≤ 180 days	0.5
+≤ 365 days	0.2
+> 365 days	0.0
+Authority
+Based on creator's role:
+
+Role	Score
+Department Head	1.0
+Team Lead	0.8
+Senior Employee	0.6
+Regular Employee	0.4
+External Source	0.2
+Verification
+Based on validation status:
+
+Status	Score
+Manually Verified by Trusted User	1.0
+Auto-Verified by System	0.7
+Unverified	0.0
+Configuration
+sql
+CREATE TABLE trust_config (
+    id SERIAL PRIMARY KEY,
+    freshness_weight FLOAT DEFAULT 0.4,
+    authority_weight FLOAT DEFAULT 0.3,
+    verification_weight FLOAT DEFAULT 0.3,
+    freshness_decay_days JSON DEFAULT '{
+        "high": 30,
+        "medium": 90,
+        "low": 180
+    }',
+    authority_roles JSON DEFAULT '{
+        "head": 1.0,
+        "lead": 0.8,
+        "senior": 0.6,
+        "regular": 0.4,
+        "external": 0.2
+    }',
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+Trust Record Storage
+sql
+CREATE TABLE trust_records (
+    id UUID PRIMARY KEY,
+    asset_id UUID REFERENCES assets(id),
+    chunk_id UUID REFERENCES chunks(id),
+    version_id UUID REFERENCES versions(id),
+    trust_score FLOAT NOT NULL,
+    freshness_score FLOAT NOT NULL,
+    authority_score FLOAT NOT NULL,
+    verification_score FLOAT NOT NULL,
+    evaluation_method VARCHAR(50) NOT NULL,
+    evaluated_at TIMESTAMP DEFAULT NOW(),
+    evaluated_by_id UUID,
+    reasoning TEXT,
+    next_evaluation_due TIMESTAMP
+);
+Trust API
+text
+POST /trust/evaluate/{asset_id}
+  - Trigger trust evaluation
+
+GET /trust/score/{asset_id}
+  - Get current trust score
+
+GET /trust/score/{asset_id}/history
+  - Trust score history
+
+POST /trust/verify/{asset_id}
+  - Manual verification
+  - Body: { "verified_by": "uuid", "notes": "string" }
+14_decay_engine.md
+Decay Rules (MVP)
+Rule	Trigger	Detection Method
+Age	No update for 180 days	Check last_updated
+Author Left	Creator is no longer active	Check employee status
+Age-Based Decay
+text
+days_old = (now - last_updated).days
+
+if days_old > 180:
+    decay_score = min(1.0, (days_old - 180) / 365)
+else:
+    decay_score = 0.0
+Author Left Decay
+text
+if creator.is_active == false:
+    decay_score = 0.7
+else:
+    decay_score = 0.0
+Overall Decay Score
+text
+decay_score = max(age_decay, author_left_decay)
+Decay Event Storage
+sql
+CREATE TABLE decay_events (
+    id UUID PRIMARY KEY,
+    asset_id UUID REFERENCES assets(id),
+    version_id UUID REFERENCES versions(id),
+    decay_type VARCHAR(50) NOT NULL,
+    decay_rate FLOAT NOT NULL,
+    decay_score FLOAT NOT NULL,
+    detected_at TIMESTAMP DEFAULT NOW(),
+    detected_by VARCHAR(50) NOT NULL,
+    trigger_event VARCHAR(255),
+    is_resolved BOOLEAN DEFAULT FALSE,
+    resolved_at TIMESTAMP,
+    resolution_action VARCHAR(50),
+    resolved_by_id UUID
+);
+Decay Rules (Future)
+Rule	Description	Priority
+Source Changed	Referenced document updated	P2
+Version Mismatch	New version exists elsewhere	P2
+Context Shift	Business context changed	P3
+Policy Expired	Governance policy expired	P3
+Decay API
+text
+POST /decay/detect/{asset_id}
+  - Detect decay for specific asset
+
+GET /decay/status/{asset_id}
+  - Get current decay status
+
+GET /decay/events/{asset_id}
+  - List all decay events
+
+POST /decay/resolve/{id}
+  - Resolve a decay event
+  - Body: { "action": "UPDATED", "resolved_by": "uuid" }
+
+POST /decay/sweep
+  - Trigger decay detection sweep
+Decay Alert Thresholds
+Score Range	Severity	Action
+0.6 - 1.0	Critical	Immediate notification
+0.3 - 0.6	High	Dashboard alert
+0.15 - 0.3	Medium	Report generation
+0.0 - 0.15	Low	Monitoring only
+15_search_architecture.md
+Search Types
+Type	Technology	Use Case
+Vector Search	Qdrant	Semantic similarity
+Keyword Search	PostgreSQL Full Text	Exact term matching
+Graph Search	Neo4j	Relationship traversal
+Hybrid Search Strategy
+
+
+
+
+
+
+
+Search Configuration
+python
+class SearchConfig:
+    vector_weight: float = 0.6
+    keyword_weight: float = 0.3
+    graph_weight: float = 0.1
+    
+    vector_limit: int = 50
+    keyword_limit: int = 50
+    
+    rerank_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+Search Filters
+Filter	Description
+content_type	Document, Meeting, Decision, Policy
+date_range	Created or updated within range
+source	Google Drive, Slack, GitHub
+author	Created by specific user
+trust_score	Minimum trust score
+department	Department ownership
+Search Response
+json
+{
+    "items": [
+        {
+            "asset": {
+                "id": "uuid",
+                "title": "Q4 Financial Report",
+                "content_type": "DOCUMENT",
+                "source": "Google Drive",
+                "created_at": "2024-01-01T00:00:00Z"
+            },
+            "score": 0.92,
+            "chunk_id": "uuid",
+            "excerpt": "... revenue increased 15% year-over-year ...",
+            "trust_score": 0.85
+        }
+    ],
+    "total": 42,
+    "facets": {
+        "content_type": [
+            {"type": "DOCUMENT", "count": 30},
+            {"type": "MEETING", "count": 12}
+        ]
+    }
+}
+16_security_architecture.md
+Authentication
+
+
+
+
+
+
+Authorization (RBAC)
+Role	Permissions
+Admin	Full system access
+Manager	Department-level access, trust verification
+Employee	Read access, search, own assets
+Viewer	Read-only access
+Data Access Control
+
+
+
+
+
+
+
+
+
+
+Encryption
+Layer	Method
+In Transit	TLS 1.3
+At Rest	AES-256
+Database	Column-level encryption for PII
+Files	Server-side encryption (S3)
+Audit Logging
+sql
+CREATE TABLE audit_logs (
+    id UUID PRIMARY KEY,
+    user_id UUID,
+    action VARCHAR(100),
+    resource_type VARCHAR(50),
+    resource_id UUID,
+    details JSONB,
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+17_deployment_architecture.md
+MVP Deployment (Docker Compose)
+yaml
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: knowledge_governance
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/knowledge_governance
+      QDRANT_URL: http://qdrant:6333
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - postgres
+      - qdrant
+      - redis
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+Production Architecture
+
+
+
+
+
+
+
+
+
+
+
+Deployment Targets
+Environment	Platform	Use
+Development	Docker Compose	Local development
+Staging	AWS ECS	Integration testing
+Production	AWS EKS / ECS	Live system
+18_mvp_scope.md
+MVP-0 Definition
+Goal: Can we detect knowledge decay and calculate trust better than existing systems?
+
+Included in MVP-0
+Core Infrastructure
+PostgreSQL database
+
+Qdrant vector store
+
+Redis caching/queue
+
+Docker Compose setup
+
+Backend Services
+Identity Service (JWT auth, users)
+
+Connector Service (Google Drive)
+
+Ingestion Service (chunking, embedding)
+
+Trust Service (score calculation)
+
+Decay Service (age + author left)
+
+Search Service (vector search)
+
+Frontend
+React UI
+
+Search interface
+
+Trust score display
+
+Decay alert dashboard
+
+Asset detail view
+
+Excluded from MVP-0
+Feature	Reason
+Slack connector	One connector enough
+Jira connector	Focus on Google Drive first
+GitHub connector	Post-MVP
+Notion connector	Post-MVP
+SharePoint connector	Post-MVP
+Policy engine	Too complex for MVP
+Compliance engine	Future feature
+Analytics engine	Can be added later
+Agent workflows	Depends on trust data
+Multi-agent system	Future feature
+MVP-0 Success Criteria
+Metric	Target
+Ingest Google Drive docs	100+ documents
+Search latency	< 200ms
+Trust score calculation	Within 1 minute per doc
+Decay detection	Within 24 hours
+User search queries	5+ per day per user
+Decay alerts resolved	50%+
+19_implementation_roadmap.md
+Sprint 1: Core Platform Setup (3 days)
+Deliverables:
+
+Docker Compose with PostgreSQL, Qdrant, Redis
+
+FastAPI skeleton with health endpoints
+
+Project structure
+
+Tasks:
+
+Setup repository structure
+
+Write docker-compose.yml
+
+Configure PostgreSQL
+
+Configure Qdrant
+
+Configure Redis
+
+Create app/main.py
+
+Test all services connect
+
+Sprint 2: Google Drive Connector (5 days)
+Deliverables:
+
+OAuth flow working
+
+File listing
+
+Document download
+
+Tasks:
+
+Google OAuth implementation
+
+File discovery (folders + files)
+
+Content extraction (Google Docs, PDF, DOCX)
+
+Metadata extraction
+
+Error handling and retries
+
+Unit tests
+
+Sprint 3: Ingestion + Qdrant (4 days)
+Deliverables:
+
+Document chunking
+
+Embedding generation
+
+PostgreSQL storage
+
+Qdrant indexing
+
+Tasks:
+
+Chunking strategy implementation
+
+Embedding service (MiniLM)
+
+Asset storage in PostgreSQL
+
+Vector storage in Qdrant
+
+Version tracking
+
+Integration tests
+
+Sprint 4: Search (3 days)
+Deliverables:
+
+Vector search API
+
+Simple React search bar
+
+Search results display
+
+Tasks:
+
+Vector search endpoint
+
+Search API integration
+
+React search component
+
+Results display component
+
+Search filters
+
+Sprint 5: Trust Engine (3 days)
+Deliverables:
+
+Trust score calculation
+
+Trust API
+
+Trust score display
+
+Tasks:
+
+Freshness calculation
+
+Authority calculation
+
+Verification tracking
+
+Trust score storage
+
+Trust API endpoints
+
+React trust component
+
+Sprint 6: Decay Engine (3 days)
+Deliverables:
+
+Age decay detection
+
+Author left detection
+
+Decay alerts
+
+Tasks:
+
+Age-based decay logic
+
+Author departure detection
+
+Decay event storage
+
+Decay API endpoints
+
+React decay alerts
+
+Sprint 7: Identity (3 days)
+Deliverables:
+
+JWT authentication
+
+User management
+
+Team management
+
+Protected endpoints
+
+Tasks:
+
+JWT authentication
+
+User CRUD
+
+Team CRUD
+
+Role-based access
+
+Secure all endpoints
+
+Login/register UI
+
+Sprint 8: UI (5 days)
+Deliverables:
+
+Full React dashboard
+
+Trust score visualization
+
+Decay alerts dashboard
+
+Knowledge asset view
+
+Tasks:
+
+Dashboard layout
+
+Search page
+
+Asset detail page
+
+Alerts page
+
+Trust score gauge
+
+Decay alert cards
+
+Navigation
+
+Deployment
+
+20_future_roadmap.md
+Phase 2: Expand Connectors (Q1 2026)
+Connector	Estimated Effort	Priority
+Slack	10 days	High
+GitHub	8 days	High
+Confluence	10 days	Medium
+Notion	8 days	Medium
+Jira	8 days	Low
+SharePoint	12 days	Low
+Phase 3: Governance Features (Q2 2026)
+Feature	Description	Effort
+Policy Engine	Define and enforce governance rules	15 days
+Compliance Auditing	GDPR, SOC2, HIPAA reports	10 days
+Data Lineage	Track data origins and transformations	12 days
+Approval Workflows	Content review and approval	8 days
+Phase 4: Intelligence Enhancements (Q3 2026)
+Feature	Description	Effort
+Advanced Trust Signals	Usage patterns, peer validation	10 days
+Graph Reasoning	Multi-hop inference	15 days
+Agent Framework	Orchestrate AI agents	20 days
+Automated RAG	Ground agents in trusted knowledge	12 days
+Phase 5: Platform Maturity (Q4 2026)
+Feature	Description	Effort
+SSO Integration	SAML, OIDC	8 days
+API Marketplace	Developer API	10 days
+Advanced Analytics	Usage dashboards	8 days
+Multi-Region	Global deployment	10 days
+Phase 6: Enterprise Scale (2027)
+Feature	Description	Effort
+High Availability	99.99% uptime	15 days
+Disaster Recovery	Backups and failover	10 days
+Advanced Security	Zero-trust architecture	12 days
+Custom Connectors	User-defined connectors	15 days
